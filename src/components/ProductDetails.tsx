@@ -63,7 +63,10 @@ export function ProductDetails({ onAddToCart }: ProductDetailsProps) {
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div>
-              <Badge variant="secondary" className="mb-4 bg-[#f2bb13] text-[#021826]">
+              <Badge
+                variant="secondary"
+                className="mb-4 bg-[#f2bb13] text-[#021826]"
+              >
                 Producto Destacado
               </Badge>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#f2f2f2] mb-4">
@@ -78,9 +81,7 @@ export function ProductDetails({ onAddToCart }: ProductDetailsProps) {
                     />
                   ))}
                 </div>
-                <span className="text-[#f2f2f2]">
-                  (4.8/5 - 127 reseñas)
-                </span>
+                <span className="text-[#f2f2f2]">(4.8/5 - 127 reseñas)</span>
               </div>
               <p className="text-lg text-[#f2f2f2] leading-relaxed">
                 La cerradura inteligente más avanzada del mercado. Combina
@@ -96,10 +97,8 @@ export function ProductDetails({ onAddToCart }: ProductDetailsProps) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {specifications.map((spec, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <Check className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span className="text-sm text-[#f2f2f2]">
-                      {spec}
-                    </span>
+                    <Check className="h-4 w-4 text-[#f2bb13] flex-shrink-0" />
+                    <span className="text-sm text-[#f2f2f2]">{spec}</span>
                   </div>
                 ))}
               </div>
@@ -110,7 +109,12 @@ export function ProductDetails({ onAddToCart }: ProductDetailsProps) {
                 <span className="text-3xl font-bold text-[#f2f2f2]">
                   $299.99
                 </span>
-                <Badge variant="outline" className="bg-[#f2bb13] text-[#052440] border-none">Envío Gratis</Badge>
+                <Badge
+                  variant="outline"
+                  className="bg-[#f2bb13] text-[#052440] border-none"
+                >
+                  Envío Gratis
+                </Badge>
               </div>
               <Button
                 size="lg"
@@ -129,7 +133,9 @@ export function ProductDetails({ onAddToCart }: ProductDetailsProps) {
           <div className="space-y-8">
             <Card className="bg-[#052440] border-none">
               <CardHeader>
-                <CardTitle className="text-[#f2bb13] text-xl">Reseñas de Clientes</CardTitle>
+                <CardTitle className="text-[#f2bb13] text-xl">
+                  Reseñas de Clientes
+                </CardTitle>
                 <CardDescription className="text-[#f2f2f2]">
                   Lo que dicen nuestros usuarios sobre Lockify Pro
                 </CardDescription>
@@ -163,16 +169,22 @@ export function ProductDetails({ onAddToCart }: ProductDetailsProps) {
 
             <Card className="bg-[#052440] border-none">
               <CardHeader>
-                <CardTitle className="text-[#f2bb13]">Garantía y Soporte</CardTitle>
+                <CardTitle className="text-[#f2bb13]">
+                  Garantía y Soporte
+                </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-[#f2bb13]" />
-                  <span className="text-sm text-[#f2f2f2]">Garantía de 2 años</span>
+                  <span className="text-sm text-[#f2f2f2]">
+                    Garantía de 2 años
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-[#f2bb13]" />
-                  <span className="text-sm text-[#f2f2f2]">Soporte técnico 24/7</span>
+                  <span className="text-sm text-[#f2f2f2]">
+                    Soporte técnico 24/7
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-[#f2bb13]" />

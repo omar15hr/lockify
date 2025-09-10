@@ -229,7 +229,7 @@ export function CheckoutModal({
     <div className="text-center py-12">
       <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
       <h3 className="text-lg font-semibold mb-2">Procesando tu pedido...</h3>
-      <p className="text-muted-foreground">
+      <p className="text-[#f2f2f2]">
         Por favor espera mientras procesamos tu pago
       </p>
     </div>
@@ -239,11 +239,11 @@ export function CheckoutModal({
     <div className="text-center py-12">
       <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
       <h3 className="text-2xl font-bold mb-2">¡Pedido Completado!</h3>
-      <p className="text-muted-foreground mb-4">
+      <p className="text-[#f2f2f2] mb-4">
         Tu pedido ha sido procesado exitosamente. Recibirás un email de
         confirmación pronto.
       </p>
-      <p className="text-sm text-muted-foreground">
+      <p className="text-sm text-[#f2f2f2]">
         Número de orden: #LK
         {Math.random().toString(36).substr(2, 9).toUpperCase()}
       </p>
