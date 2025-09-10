@@ -22,7 +22,7 @@ export function ProductDetails({ onAddToCart }: ProductDetailsProps) {
       id: "lockify-pro",
       name: "Lockify Pro",
       price: 299.99,
-      image: "/smart-electronic-door-lock.jpg",
+      image: "/images/hero-img.jpg",
     });
   };
 

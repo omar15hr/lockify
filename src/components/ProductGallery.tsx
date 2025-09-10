@@ -104,7 +104,7 @@ export function ProductGallery() {
                 <Image
                   width={200}
                   height={200}
-                  src={image.src || "/placeholder.svg"}
+                  src={image.src || "/images/hero-img.jpg"}
                   alt={image.alt}
                   className="w-full h-full object-cover"
                 />
