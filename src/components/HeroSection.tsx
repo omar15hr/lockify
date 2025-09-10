@@ -22,17 +22,17 @@ export function HeroSection({ onAddToCart }: HeroSectionProps) {
   return (
     <section
       id="home"
-      className="relative bg-gradient-to-br from-muted to-background py-20 lg:py-32"
+      className="relative bg-[#021826] py-20 lg:py-32"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold text-foreground text-balance">
+              <h1 className="text-4xl lg:text-6xl font-bold text-balance text-[#f2f2f2]">
                 Asegura tu hogar con{" "}
-                <span className="text-primary">tecnología inteligente</span>
+                <span className="text-[#f2bb13]">tecnología inteligente</span>
               </h1>
-              <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
+              <p className="text-xl text-pretty leading-relaxed text-[#f2f2f2]">
                 Lockify Pro es la cerradura eléctrica más avanzada del mercado.
                 Control remoto, alertas de seguridad y instalación fácil en un
                 solo dispositivo.
@@ -42,7 +42,7 @@ export function HeroSection({ onAddToCart }: HeroSectionProps) {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="text-lg px-8 py-6"
+                className="text-lg px-8 py-6 bg-[#052440] hover:bg-[#021826] cursor-pointer"
                 onClick={handleAddToCart}
               >
                 Comprar Ahora - $299.99
@@ -50,7 +50,7 @@ export function HeroSection({ onAddToCart }: HeroSectionProps) {
               <Button
                 variant="outline"
                 size="lg"
-                className="text-lg px-8 py-6 bg-transparent"
+                className="text-lg text-[#052440] px-8 py-6 bg-transparent border-[#052440] cursor-pointer"
               >
                 Ver Demo
               </Button>
@@ -83,9 +83,9 @@ export function HeroSection({ onAddToCart }: HeroSectionProps) {
               <Image
                 width={500}
                 height={500}
-                src="/modern-smart-door-lock-with-digital-display.jpg"
+                src="/images/hero-img.jpg"
                 alt="Lockify Pro Smart Lock"
-                className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
+                className="w-full max-w-md mx-auto rounded-2xl shadow-2xl shadow-[#052440]"
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl transform scale-110"></div>
