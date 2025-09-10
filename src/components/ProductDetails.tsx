@@ -58,7 +58,7 @@ export function ProductDetails({ onAddToCart }: ProductDetailsProps) {
               <Badge variant="secondary" className="mb-4">
                 Producto Destacado
               </Badge>
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Lockify Pro</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Lockify</h2>
               <div className="flex items-center gap-2 mb-4">
                 <div className="flex items-center">
                   {[...Array(5)].map((_, i) => (
@@ -90,7 +90,7 @@ export function ProductDetails({ onAddToCart }: ProductDetailsProps) {
                 <span className="text-3xl font-bold text-foreground">$299.99</span>
                 <Badge variant="outline">Envío Gratis</Badge>
               </div>
-              <Button size="lg" className="w-full text-lg" onClick={handleAddToCart}>
+              <Button size="lg" className="w-full text-lg cursor-pointer" onClick={handleAddToCart}>
                 <ShoppingCart className="h-5 w-5 mr-2" />
                 Agregar al Carrito
               </Button>

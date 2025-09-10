@@ -1,11 +1,12 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export function ProductGallery() {
-  const [currentImage, setCurrentImage] = useState(0)
+  const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
     {
@@ -24,21 +25,23 @@ export function ProductGallery() {
       src: "/smart-door-lock-internal-mechanism-components.jpg",
       alt: "Componentes internos",
     },
-  ]
+  ];
 
   const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length)
-  }
+    setCurrentImage((prev) => (prev + 1) % images.length);
+  };
 
   const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length)
-  }
+    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+  };
 
   return (
     <section id="gallery" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">Galería del producto</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">
+            Galería del producto
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Explora Lockify Pro desde todos los ángulos
           </p>
@@ -47,7 +50,9 @@ export function ProductGallery() {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             <div className="aspect-square overflow-hidden rounded-2xl bg-muted">
-              <img
+              <Image
+                width={500}
+                height={500}
                 src={images[currentImage].src || "/placeholder.svg"}
                 alt={images[currentImage].alt}
                 className="w-full h-full object-cover"
@@ -78,7 +83,9 @@ export function ProductGallery() {
               <button
                 key={index}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentImage ? "bg-primary" : "bg-muted-foreground/30"
+                  index === currentImage
+                    ? "bg-primary"
+                    : "bg-muted-foreground/30"
                 }`}
                 onClick={() => setCurrentImage(index)}
               />
@@ -94,12 +101,18 @@ export function ProductGallery() {
                 }`}
                 onClick={() => setCurrentImage(index)}
               >
-                <img src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
+                <Image
+                  width={200}
+                  height={200}
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
+                  className="w-full h-full object-cover"
+                />
               </button>
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

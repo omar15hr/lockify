@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { Minus, Plus, Trash2 } from "lucide-react"
 import type { CartItem } from "@/app/page"
+import Image from "next/image"
 
 interface CartProps {
   isOpen: boolean
@@ -36,9 +37,11 @@ export function Cart({ isOpen, onClose, items, onRemoveItem, onUpdateQuantity, o
               <div className="space-y-6">
                 {items.map((item) => (
                   <div key={item.id} className="flex items-center space-x-4">
-                    <img
+                    <Image
                       src={item.image || "/placeholder.svg"}
                       alt={item.name}
+                      width={64}
+                      height={64}
                       className="w-16 h-16 object-cover rounded-lg"
                     />
                     <div className="flex-1">
@@ -79,12 +82,12 @@ export function Cart({ isOpen, onClose, items, onRemoveItem, onUpdateQuantity, o
           </div>
 
           {items.length > 0 && (
-            <div className="border-t border-border pt-6 space-y-4">
+            <div className="border-t border-border pt-6 space-y-4 p-4">
               <div className="flex justify-between items-center">
                 <span className="text-lg font-semibold">Total:</span>
                 <span className="text-lg font-bold">${totalPrice.toFixed(2)}</span>
               </div>
-              <Button className="w-full" size="lg" onClick={onCheckout}>
+              <Button className="w-full cursor-pointer" size="lg" onClick={onCheckout}>
                 Proceder al Pago
               </Button>
             </div>

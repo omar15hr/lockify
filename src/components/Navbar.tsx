@@ -55,7 +55,7 @@ export function Navbar({ cartItemCount, onCartClick }: NavbarProps) {
             variant="outline"
             size="sm"
             onClick={onCartClick}
-            className="relative bg-transparent"
+            className="relative bg-transparent cursor-pointer"
           >
             <ShoppingCart className="h-4 w-4" />
             {cartItemCount > 0 && (

@@ -42,7 +42,6 @@ export function CheckoutModal({ isOpen, onClose, items, totalPrice, onOrderCompl
     e.preventDefault()
     setStep("processing")
 
-    // Simular procesamiento de pago
     setTimeout(() => {
       setStep("success")
       setTimeout(() => {
@@ -72,7 +71,7 @@ export function CheckoutModal({ isOpen, onClose, items, totalPrice, onOrderCompl
         </h3>
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <Label htmlFor="firstName">Nombre</Label>
+            <Label htmlFor="firstName" className="mb-3">Nombre</Label>
             <Input
               id="firstName"
               value={formData.firstName}
@@ -81,7 +80,7 @@ export function CheckoutModal({ isOpen, onClose, items, totalPrice, onOrderCompl
             />
           </div>
           <div>
-            <Label htmlFor="lastName">Apellido</Label>
+            <Label htmlFor="lastName" className="mb-3">Apellido</Label>
             <Input
               id="lastName"
               value={formData.lastName}
@@ -91,7 +90,7 @@ export function CheckoutModal({ isOpen, onClose, items, totalPrice, onOrderCompl
           </div>
         </div>
         <div>
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="email" className="mb-3">Email</Label>
           <Input
             id="email"
             type="email"
@@ -107,7 +106,7 @@ export function CheckoutModal({ isOpen, onClose, items, totalPrice, onOrderCompl
       <div className="space-y-4">
         <h3 className="text-lg font-semibold">Dirección de Envío</h3>
         <div>
-          <Label htmlFor="address">Dirección</Label>
+          <Label htmlFor="address" className="mb-3">Dirección</Label>
           <Input
             id="address"
             value={formData.address}
@@ -117,7 +116,7 @@ export function CheckoutModal({ isOpen, onClose, items, totalPrice, onOrderCompl
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <Label htmlFor="city">Ciudad</Label>
+            <Label htmlFor="city" className="mb-3">Ciudad</Label>
             <Input
               id="city"
               value={formData.city}
@@ -126,7 +125,7 @@ export function CheckoutModal({ isOpen, onClose, items, totalPrice, onOrderCompl
             />
           </div>
           <div>
-            <Label htmlFor="zipCode">Código Postal</Label>
+            <Label htmlFor="zipCode" className="mb-3">Código Postal</Label>
             <Input
               id="zipCode"
               value={formData.zipCode}
@@ -145,7 +144,7 @@ export function CheckoutModal({ isOpen, onClose, items, totalPrice, onOrderCompl
           Información de Pago
         </h3>
         <div>
-          <Label htmlFor="cardNumber">Número de Tarjeta</Label>
+          <Label htmlFor="cardNumber" className="mb-3">Número de Tarjeta</Label>
           <Input
             id="cardNumber"
             placeholder="1234 5678 9012 3456"
@@ -156,7 +155,7 @@ export function CheckoutModal({ isOpen, onClose, items, totalPrice, onOrderCompl
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <Label htmlFor="expiryDate">Fecha de Vencimiento</Label>
+            <Label htmlFor="expiryDate" className="mb-3">Fecha de Vencimiento</Label>
             <Input
               id="expiryDate"
               placeholder="MM/AA"
@@ -166,7 +165,7 @@ export function CheckoutModal({ isOpen, onClose, items, totalPrice, onOrderCompl
             />
           </div>
           <div>
-            <Label htmlFor="cvv">CVV</Label>
+            <Label htmlFor="cvv" className="mb-3">CVV</Label>
             <Input
               id="cvv"
               placeholder="123"
