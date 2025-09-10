@@ -10,19 +10,19 @@ export function ProductGallery() {
 
   const images = [
     {
-      src: "/smart-door-lock-front-view-with-digital-keypad.jpg",
+      src: "/images/hero-img.jpg",
       alt: "Vista frontal de Lockify Pro",
     },
     {
-      src: "/smart-door-lock-side-profile-installation-view.jpg",
+      src: "/images/hero-img.jpg",
       alt: "Vista lateral de instalación",
     },
     {
-      src: "/smart-door-lock-mobile-app-interface.jpg",
+      src: "/images/hero-img.jpg",
       alt: "Interfaz de la aplicación móvil",
     },
     {
-      src: "/smart-door-lock-internal-mechanism-components.jpg",
+      src: "/images/hero-img.jpg",
       alt: "Componentes internos",
     },
   ];
@@ -34,15 +34,15 @@ export function ProductGallery() {
   const prevImage = () => {
     setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   };
-
+ 
   return (
-    <section id="gallery" className="py-20 bg-background">
+    <section id="gallery" className="py-20 bg-[#021826]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#f2f2f2] text-balance">
             Galería del producto
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-md text-[#f2f2f2] max-w-2xl mx-auto text-pretty">
             Explora Lockify Pro desde todos los ángulos
           </p>
         </div>
@@ -84,8 +84,8 @@ export function ProductGallery() {
                 key={index}
                 className={`w-3 h-3 rounded-full transition-colors ${
                   index === currentImage
-                    ? "bg-primary"
-                    : "bg-muted-foreground/30"
+                    ? "bg-[#f2bb13]"
+                    : "bg-[#f2bb13]/30"
                 }`}
                 onClick={() => setCurrentImage(index)}
               />

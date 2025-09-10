@@ -20,10 +20,7 @@ export function HeroSection({ onAddToCart }: HeroSectionProps) {
   };
 
   return (
-    <section
-      id="home"
-      className="relative bg-[#021826] py-20 lg:py-32"
-    >
+    <section id="home" className="relative bg-[#021826] py-20 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -32,7 +29,7 @@ export function HeroSection({ onAddToCart }: HeroSectionProps) {
                 Asegura tu hogar con{" "}
                 <span className="text-[#f2bb13]">tecnología inteligente</span>
               </h1>
-              <p className="text-xl text-pretty leading-relaxed text-[#f2f2f2]">
+              <p className="text-lg text-pretty leading-relaxed text-[#f2f2f2]">
                 Lockify Pro es la cerradura eléctrica más avanzada del mercado.
                 Control remoto, alertas de seguridad y instalación fácil en un
                 solo dispositivo.
@@ -42,7 +39,7 @@ export function HeroSection({ onAddToCart }: HeroSectionProps) {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="text-lg px-8 py-6 bg-[#052440] hover:bg-[#021826] cursor-pointer"
+                className="text-lg px-8 py-6 text-[#052440] bg-[#f2bb13] hover:bg-[#f2a30f] cursor-pointer"
                 onClick={handleAddToCart}
               >
                 Comprar Ahora - $299.99
@@ -50,7 +47,7 @@ export function HeroSection({ onAddToCart }: HeroSectionProps) {
               <Button
                 variant="outline"
                 size="lg"
-                className="text-lg text-[#052440] px-8 py-6 bg-transparent border-[#052440] cursor-pointer"
+                className="text-lg text-[#f2bb13] px-8 py-6 bg-transparent border-[#f2bb13] hover:bg-[#f2bb13] hover:text-[#052440] cursor-pointer"
               >
                 Ver Demo
               </Button>
@@ -58,20 +55,20 @@ export function HeroSection({ onAddToCart }: HeroSectionProps) {
 
             <div className="flex items-center gap-8 pt-4">
               <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-primary" />
-                <span className="text-sm text-muted-foreground">
+                <Shield className="h-5 w-5 text-[#f2bb13]" />
+                <span className="text-sm text-[#f2f2f2]">
                   Seguridad Garantizada
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Smartphone className="h-5 w-5 text-primary" />
-                <span className="text-sm text-muted-foreground">
+                <Smartphone className="h-5 w-5 text-[#f2bb13]" />
+                <span className="text-sm text-[#f2f2f2]">
                   Control Remoto
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap className="h-5 w-5 text-primary" />
-                <span className="text-sm text-muted-foreground">
+                <Zap className="h-5 w-5 text-[#f2bb13]" />
+                <span className="text-sm text-[#f2f2f2]">
                   Instalación Rápida
                 </span>
               </div>

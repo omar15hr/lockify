@@ -40,24 +40,24 @@ export function FeaturesSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-[#f2f2f2]">
-            Características que marcan la diferencia
+            Características que marcan la <span className="text-[#f2bb13]">diferencia</span>
           </h2>
-          <p className="text-xl text-[#f2f2f2] max-w-2xl mx-auto text-pretty">
+          <p className="text-md text-[#f2f2f2] max-w-2xl mx-auto text-pretty">
             Lockify Pro combina seguridad, comodidad y tecnología de vanguardia
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow bg-[#052440] shadow-[#052440]">
+            <Card key={index} className="hover:shadow-lg transition-shadow border-none bg-[#052440] hover:shadow-[#f2bb13]">
               <CardHeader>
                 <div className="w-12 h-12 bg-[#f2bb13] text-[#052440] rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
+                <CardTitle className="text-2xl text-[#f2f2f2]">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base leading-relaxed">{feature.description}</CardDescription>
+                <CardDescription className="text-lg leading-relaxed text-[#f2f2f2]">{feature.description}</CardDescription>
               </CardContent>
             </Card>
           ))}
